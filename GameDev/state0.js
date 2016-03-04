@@ -20,18 +20,28 @@ demo.state0.prototype = {
         adam.animations.add('walk', [0, 1, 2, 3, 4]);
         game.physics.enable(adam);
         adam.body.collideWorldBounds = true;
+        
 	},
 
 	update: function(){
         if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
              adam.x = adam.x + speed;
+             adam.animations.play('walk', 20, true);
           }
-       if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
+       else if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
             adam.x = adam.x - speed;
+            adam.animations.play('walk', 20, true);
        }
+        else{
+            adam.animations.stop('walk');
+        }
        if (game.input.keyboard.isDown(Phaser.Keyboard.UP)){
-           adam.y = adam.y - speed;           
-     }
+           adam.y = adam.y - speed;
+           
+           if(adam.y < 400){
+               adam.y = 400;
+           }
+        }
        if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
              adam.y = adam.y + speed;
         }
