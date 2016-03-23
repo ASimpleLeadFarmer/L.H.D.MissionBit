@@ -21,7 +21,7 @@ demo.state0.prototype = {
         Ford.anchor.setTo(0.5, 0.5);
         Ford.scale.setTo(0.7, 0.7);
         game.physics.enable(Ford);
-        adam.body.collideWorldBounds = true;
+        Ford.body.collideWorldBounds = true;
         game.camera.follow(Ford);
         game.scale.scalemode = Phaser.ScaleManager.SHOW_ALL;
         
