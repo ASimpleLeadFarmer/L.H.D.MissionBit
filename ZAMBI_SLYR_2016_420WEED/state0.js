@@ -52,4 +52,4 @@ demo.state0.prototype = {
              Ford.y = Ford.y + speed;
         }
     }
-};
+};s
