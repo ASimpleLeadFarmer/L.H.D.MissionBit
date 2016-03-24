@@ -7,7 +7,7 @@ demo.state0 = function(){};
 demo.state0.prototype = {
 	preload: function(){
 		game.load.image('trees', 'assets/background/treeBG.png');
-		game.load.spritesheet('ford', 'assets/spritesheets/adamSpritesheet.png', 240, 370);
+		game.load.spritesheet('ford', 'assets/spritesheets/fordSpritesheet.png', 240, 370);
         
 	},
 
