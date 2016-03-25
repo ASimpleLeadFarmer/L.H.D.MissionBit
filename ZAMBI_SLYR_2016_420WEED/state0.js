@@ -17,7 +17,7 @@ demo.state0.prototype = {
         
         var trees = game.add.sprite(0, 0, 'trees');
         ford = game.add.sprite(0, 450, 'ford');
-        ford.animations.add('walk', [0, 1, 2, 3, 4]);
+        ford.animations.add('walk', [0, 1, 2, 3, 4, 5, 6, 7, 8]);
         ford.anchor.setTo(0.5, 0.5);
         ford.scale.setTo(0.7, 0.7);
         game.physics.enable(ford);
@@ -34,7 +34,7 @@ demo.state0.prototype = {
             ford.scale.setTo(0.7, 0.7);
           }
        else if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
-            ford.x = adam.x - speed;
+            ford.x = ford.x - speed;
             ford.animations.play('walk', 20, true);
            ford.scale.setTo(-0.7, 0.7);
        }
