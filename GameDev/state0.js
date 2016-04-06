@@ -7,7 +7,7 @@ demo.state0 = function(){};
 demo.state0.prototype = {
 	preload: function(){
 		game.load.image('trees', 'assets/background/wasteland.png');
-		game.load.spritesheet('adam', 'assets/spritesheets/ford.png', 240, 370);
+		game.load.spritesheet('adam', 'assets/spritesheets/ford.png', 255, 241);
         
 	},
 
@@ -17,13 +17,15 @@ demo.state0.prototype = {
         
         var trees = game.add.sprite(0, 0, 'trees');
         adam = game.add.sprite(0, 450, 'adam');
-        adam.animations.add('walk', [0, 1, 2, 3, 4]);
+//        adam.animations.add('walk', [0, 1, 2, 3, 4]);
         adam.anchor.setTo(0.5, 0.5);
         adam.scale.setTo(0.7, 0.7);
         game.physics.enable(adam);
         adam.body.collideWorldBounds = true;
         game.camera.follow(adam);
         game.scale.scalemode = Phaser.ScaleManager.SHOW_ALL;
+//        trees.height = game.height;
+//        trees.width  game.width;
         
 	},
 
