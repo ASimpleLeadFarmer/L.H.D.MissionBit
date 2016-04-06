@@ -6,8 +6,8 @@ demo.state0 = function(){};
 
 demo.state0.prototype = {
 	preload: function(){
-		game.load.image('trees', 'assets/background/treeBG.png');
-		game.load.spritesheet('adam', 'assets/spritesheets/adamSpritesheet.png', 240, 370);
+		game.load.image('trees', 'assets/background/wasteland.png');
+		game.load.spritesheet('adam', 'assets/spritesheets/ford.png', 240, 370);
         
 	},
 
