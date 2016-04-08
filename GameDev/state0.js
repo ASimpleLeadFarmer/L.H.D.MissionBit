@@ -6,7 +6,7 @@ demo.state0 = function(){};
 
 demo.state0.prototype = {
 	preload: function(){
-		game.load.image('trees', 'assets/background/wasteland2.png');
+		game.load.image('trees', 'assets/background/wasteland3.png');
 		game.load.spritesheet('adam', 'assets/spritesheets/ford.png', 255, 241);
         
 	},
@@ -24,8 +24,8 @@ demo.state0.prototype = {
         adam.body.collideWorldBounds = true;
         game.camera.follow(adam);
         game.scale.scalemode = Phaser.ScaleManager.SHOW_ALL;
-        trees.height = game.height;
-        trees.width = game.width;
+        trees.height = game.height = 1000;
+        trees.width = game.width = 2813;
         
 	},
 
@@ -43,15 +43,17 @@ demo.state0.prototype = {
         else{
             adam.animations.stop('walk');
         }
-       if (game.input.keyboard.isDown(Phaser.Keyboard.UP)){
-           adam.y = adam.y - speed;
-           
-           if(adam.y < 400){
-               adam.y = 400;
-           }
-        }
+//       if (game.input.keyboard.isDown(Phaser.Keyboard.UP)){
+//           adam.y = adam.y - speed;
+//           
+//           if(adam.y < 400){
+//               adam.y = 400;
+//           }
+//        }
        if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
              adam.y = adam.y + speed;
         }
+        if (game.input.keyboard.isDown(Phaser.Keyboard.UP)&& adam.y = 1000){
+            adam.body.velocity.y = -350
     }
 };
