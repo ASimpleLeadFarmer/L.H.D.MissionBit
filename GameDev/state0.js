@@ -8,8 +8,8 @@ demo.state0 = function(){};
 demo.state0.prototype = {
 	preload: function(){
 		game.load.image('trees', 'assets/background/wasteland3.png');
-		game.load.spritesheet('adam', 'assets/spritesheets/tank.png', 199, 82);
-        
+		game.load.spritesheet('adam', 'assets/spritesheets/ford.png', 250, 246);
+        game.load.spritesheeet('slaw', 'assets/background/obstical course.png');
 	},
 
 	create: function(){
@@ -19,8 +19,8 @@ demo.state0.prototype = {
         var trees = game.add.sprite(0, 0, 'trees');
         adam = game.add.sprite(120, 550, 'adam');
 //        adam.animations.add('walk', [0, 1, 2]);
-//        adam.anchor.setTo(0.5, 0.5);
-        adam.scale.setTo(2, 2);
+        adam.anchor.setTo(0.5, 0.5);
+        adam.scale.setTo(0.5, 0.5);
         game.physics.enable(adam);
         adam.body.collideWorldBounds = true;
         game.camera.follow(adam);
@@ -39,12 +39,12 @@ demo.state0.prototype = {
         if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
              adam.x = adam.x + speed;
              adam.animations.play('walk', 20, true);
-            adam.scale.setTo(2, 2);
+            adam.scale.setTo(0.5, 0.5);
           }
        else if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
             adam.x = adam.x - speed;
             adam.animations.play('walk', 20, true);
-           adam.scale.setTo(2,2);
+           adam.scale.setTo(0.5,0.5);
        }
         else{
             adam.animations.stop('walk');
