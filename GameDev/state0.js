@@ -11,8 +11,12 @@ demo.state0.prototype = {
 	preload: function(){
 		game.load.image('trees', 'assets/background/wasteland3.png');
 		game.load.spritesheet('adam', 'assets/spritesheets/ford.png', 250, 246);
+<<<<<<< HEAD
 //        game.load.spritesheet('slaw', 'assets/background/obstical course.png');
         game.load.spritesheet('ledge', 'assets/sprites/JavaScript.png');
+=======
+        game.load.spritesheet('platforms', 'assets/background/plafrom.png');
+>>>>>>> origin/master
 	},
 
 	create: function(){
@@ -30,7 +34,7 @@ demo.state0.prototype = {
 //        slaw.body.immovable = true;
 //        slaw.moves = false;
         
-//        adam.animations.add('walk', [0, 1, 2]);
+//        adam.animations.add('walk', [0, 1, 2,3]);
         adam.anchor.setTo(0.5, 0.5);
         adam.scale.setTo(0.5, 0.5);
         game.physics.enable(adam);
@@ -45,8 +49,14 @@ demo.state0.prototype = {
         
         var ledge = platforms.create(300, 175, 'ledge');
         ledge.body.immovable = true;
+<<<<<<< HEAD
         ledge.height = 50;
         ledge.width = 200;
+=======
+        var ledge = platforms.create(20, 165);
+        ledge.body.immovable = true
+        var ledge = platforms.create(47, 150)'
+>>>>>>> origin/master
         
         //add ledges here
          var ledge = platforms.create(600, 275, 'ledge');
@@ -123,6 +133,7 @@ demo.state0.prototype = {
 	update: function(){
 //        game.physics.arcade.collide(adam, slaw);
         game.physics.arcade.collide(adam, platforms);
+<<<<<<< HEAD
 //           ghost.body.velocity.x = 0;
 
     if (cursors.left.isDown)
@@ -156,4 +167,33 @@ demo.state0.prototype = {
     }
 
 },
+=======
+        //if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
+           //  adam.x = adam.x + speed;
+          //  adam.animations.play('walk', 20, true);
+           // adam.scale.setTo(0.5, 0.5);
+       //   }
+      // else if (game.input.keyboard.isDown(Phaser.Keyboard.LEFT)){
+      //      adam.x = adam.x - speed;
+      //      adam.animations.play('walk', 20, true);
+      //     adam.scale.setTo(0.5,0.5);
+     //  }
+      //  else{
+    //        adam.animations.stop('walk');
+    //    }
+       //if (game.input.keyboard.isDown(Phaser.Keyboard.UP)){
+        //   adam.y = adam.y - speed;
+           
+       //    if(adam.y < 550){
+       //        adam.y = 550;
+       //    }
+      // }
+       //if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
+             adam.y = adam.y + speed;
+       // }
+      //  if (game.input.keyboard.isDown(Phaser.Keyboard.UP)&& adam.y = 1000){
+       //     adam.body.velocity.y = -350
+      //  }
+   // }
+>>>>>>> origin/master
 };
