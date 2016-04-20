@@ -1,9 +1,9 @@
 var demo = {};
-var platforms;
+//var platforms;
 //var speed = 2;
 var adam;
 var cursors;
-var slaw;
+//var slaw;
 demo.state0 = function(){};
 
 
@@ -11,12 +11,12 @@ demo.state0.prototype = {
 	preload: function(){
 		game.load.image('trees', 'assets/background/wasteland3.png');
 		game.load.spritesheet('adam', 'assets/spritesheets/ford.png', 250, 246);
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //        game.load.spritesheet('slaw', 'assets/background/obstical course.png');
         game.load.spritesheet('ledge', 'assets/sprites/JavaScript.png');
-=======
-        game.load.spritesheet('platforms', 'assets/background/plafrom.png');
->>>>>>> origin/master
+//=======
+//        game.load.spritesheet('platforms', 'assets/background/plafrom.png');
+//>>>>>>> origin/master
 	},
 
 	create: function(){
@@ -34,7 +34,7 @@ demo.state0.prototype = {
 //        slaw.body.immovable = true;
 //        slaw.moves = false;
         
-//        adam.animations.add('walk', [0, 1, 2,3]);
+        adam.animations.add('walk', [0, 1, 2, 3]);
         adam.anchor.setTo(0.5, 0.5);
         adam.scale.setTo(0.5, 0.5);
         game.physics.enable(adam);
@@ -47,48 +47,47 @@ demo.state0.prototype = {
         platforms = game.add.group();
         platforms.enableBody = true;
         
-        var ledge = platforms.create(300, 175, 'ledge');
+        var ledge = platforms.create(300, 600, 'ledge');
         ledge.body.immovable = true;
-<<<<<<< HEAD
         ledge.height = 50;
         ledge.width = 200;
-=======
-        var ledge = platforms.create(20, 165);
-        ledge.body.immovable = true
-        var ledge = platforms.create(47, 150)'
->>>>>>> origin/master
+//=======
+//        var ledge = platforms.create(20, 165);
+//        ledge.body.immovable = true
+//        var ledge = platforms.create(47, 150)'
+//>>>>>>> origin/master
         
         //add ledges here
-         var ledge = platforms.create(600, 275, 'ledge');
+         var ledge = platforms.create(600, 500, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
         
-         var ledge = platforms.create(3000, 175, 'ledge');
-        ledge.body.immovable = true;
-        ledge.height = 50;
-        ledge.width = 200;
-        
-        
-        
-        var ledge = platforms.create(3000, 175, 'ledge');
-        ledge.body.immovable = true;
-        ledge.height = 50;
-        ledge.width = 200;
-        
-        var ledge = platforms.create(3000, 175, 'ledge');
+         var ledge = platforms.create(1000, 525, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
         
         
-        var ledge = platforms.create(3000, 175, 'ledge');
+        
+        var ledge = platforms.create(1500, 600, 'ledge');
+        ledge.body.immovable = true;
+        ledge.height = 50;
+        ledge.width = 200;
+        
+        var ledge = platforms.create(1700, 700, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
         
         
-        var ledge = platforms.create(3000, 175, 'ledge');
+        var ledge = platforms.create(1900, 500, 'ledge');
+        ledge.body.immovable = true;
+        ledge.height = 50;
+        ledge.width = 200;
+        
+        
+        var ledge = platforms.create(1, 175, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
@@ -133,7 +132,7 @@ demo.state0.prototype = {
 	update: function(){
 //        game.physics.arcade.collide(adam, slaw);
         game.physics.arcade.collide(adam, platforms);
-<<<<<<< HEAD
+////<<<<<<< HEAD
 //           ghost.body.velocity.x = 0;
 
     if (cursors.left.isDown)
@@ -167,7 +166,7 @@ demo.state0.prototype = {
     }
 
 },
-=======
+//=======
         //if (game.input.keyboard.isDown(Phaser.Keyboard.RIGHT)){
            //  adam.x = adam.x + speed;
           //  adam.animations.play('walk', 20, true);
@@ -189,11 +188,11 @@ demo.state0.prototype = {
        //    }
       // }
        //if (game.input.keyboard.isDown(Phaser.Keyboard.DOWN)){
-             adam.y = adam.y + speed;
+//             adam.y = adam.y + speed;
        // }
       //  if (game.input.keyboard.isDown(Phaser.Keyboard.UP)&& adam.y = 1000){
        //     adam.body.velocity.y = -350
       //  }
    // }
->>>>>>> origin/master
+//>>>>>>> origin/master
 };
