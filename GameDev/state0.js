@@ -87,7 +87,7 @@ demo.state0.prototype = {
         ledge.width = 200;
         
         
-        var ledge = platforms.create(1, 175, 'ledge');
+        var ledge = platforms.create(1950, 300, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
