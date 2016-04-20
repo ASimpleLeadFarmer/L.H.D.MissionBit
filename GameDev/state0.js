@@ -87,19 +87,19 @@ demo.state0.prototype = {
         ledge.width = 200;
         
         
-        var ledge = platforms.create(1950, 300, 'ledge');
+        var ledge = platforms.create(2000, 300, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
         
         
-        var ledge = platforms.create(3000, 175, 'ledge');
+        var ledge = platforms.create(2100, 200, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
         
         
-        var ledge = platforms.create(3000, 175, 'ledge');
+        var ledge = platforms.create(2300, 350, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
