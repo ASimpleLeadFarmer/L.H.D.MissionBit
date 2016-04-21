@@ -105,17 +105,17 @@ demo.state0.prototype = {
         ledge.width = 200;
         
         
-        var ledge = platforms.create(3000, 175, 'ledge');
+        var ledge = platforms.create(3000, 400, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
         
-        var ledge = platforms.create(3000, 175, 'ledge');
+        var ledge = platforms.create(3500, 175, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
         
-        var ledge = platforms.create(3000, 175, 'ledge');
+        var ledge = platforms.create(3700, 450, 'ledge');
         ledge.body.immovable = true;
         ledge.height = 50;
         ledge.width = 200;
@@ -139,14 +139,14 @@ demo.state0.prototype = {
     {
         //  Move to the left
         adam.body.velocity.x = -150;
-
+        adam.scale.setTo(-0.5,0.5)
         adam.animations.play('walk', 10, true);
     }
     else if (cursors.right.isDown)
     {
         //  Move to the right
         adam.body.velocity.x = 150;
-
+        adam.scale.setTo(0.5,0.5);
         adam.animations.play('walk', 10 , true);
     }
     else
